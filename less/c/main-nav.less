@@ -1,0 +1,48 @@
+.main-nav {
+    color: #fff;
+    font: 700 16px/1 @font-family-sans-serif;
+    margin-bottom: 20px;
+    }
+.main-nav-list {
+    background-color: @nav-bg;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+.main-nav-item {
+    &:extend(.t-cell);
+    text-align: center;
+    &:first-child {
+        .main-nav-link {
+            border-radius: @m-round  0 0 @m-round;
+            }
+        }
+    &:last-child {
+        .main-nav-link {
+            border-radius: 0 @m-round @m-round 0;
+            }
+        }
+    }
+.main-nav-link {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    &:extend(.db);
+    &:visited {
+        color: #fff;
+        }
+    &:hover {
+        background-color: @link-color;
+        color: #fff;
+        #gradient > .radial(#189cca,@link-color);
+        }
+    }
+.m-calculate-item {
+    background-color: @m-calculate-bg;
+    }
+.m-calculate-link {
+
+    }
+.m-sorry-nav-divider {
+    width: 12px;
+    }

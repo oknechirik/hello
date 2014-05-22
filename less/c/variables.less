@@ -7,17 +7,25 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+
+
 @gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
+@gray-dark:              #131313;   // #333
 @gray:                   lighten(#000, 33.5%); // #555
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #428bca;
+@brand-primary:         #366986;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
+@brand-danger:          @m-red;
+
+@branch-red : red;
+@branch-green : #01c850;
+@branch-blue : #0190ec;
+@branch-orange : #f08801;
+@branch-purple : #b50fd9;
 
 
 //== Scaffolding
@@ -32,6 +40,7 @@
 
 //** Global textual link color.
 @link-color:            @brand-primary;
+@link-visited-color:    lighten(@link-color, 15%);
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 
@@ -40,12 +49,14 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  'Ubuntu', Helvetica, Arial, sans-serif;
+@font-family-main:        Arial, Helvetica, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
+@font-base: @font-family-sans-serif;
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
@@ -97,7 +108,7 @@
 @line-height-small:         1.5;
 
 @border-radius-base:        4px;
-@border-radius-large:       6px;
+@border-radius-large:       10px;
 @border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -567,7 +578,7 @@
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             #fff;
+@modal-content-bg:                             @m-red;
 //** Modal content border color
 @modal-content-border-color:                   rgba(0,0,0,.2);
 //** Modal content border color **for IE8**
@@ -828,3 +839,17 @@
 
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
+
+//colors
+@m-red : #ed1b2f;
+@m-blue : #00749c;
+@m-yellow: #ffd636;
+
+@m-round : 5px;
+@nav-bg : #00b4f1;
+@m-calculate-bg : @m-red;
+
+@m-actions-title : #4099cb;
+
+@inner-nav-bg : #f8f8f8;
+@inner-nav-active : #5f027e;

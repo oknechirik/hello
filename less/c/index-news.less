@@ -1,0 +1,77 @@
+.index-news-title {
+    margin-bottom: 1.5em;
+//    padding-top: 1.5em;
+    > a {
+        font-size: 14px;
+        font-weight: 400;
+        margin-left: 1em;
+        text-decoration: underline;
+        }
+    }
+.index-news-item {
+    color: @brand-primary;
+    font: 15px @font-base;
+    margin-bottom: 2.25em;
+    .clearfix();
+    &:last-child {
+        margin-bottom: .25em;
+        }
+    }
+.index-news-preview {
+    &:extend(.pull-left);
+    &:extend(.m-round);
+    margin-top: 4px;
+    width: 143px;
+    }
+.index-news-date {
+    &:extend(.db);
+    color: @m-red;
+    font-size: 12px;
+    margin-bottom: 8px;
+    }
+.index-news-more {
+    margin-top: .1em;
+    }
+.index-news-brief, .index-news-date, .index-news-more {
+    margin-left: 170px;
+    }
+.index-news-brief {
+    font-size: 13px;
+    margin-bottom: 8px;
+    }
+.more-link {
+    color: @m-red;
+    &:visited {
+        color: @m-red;
+        }
+    &:hover {
+        color: darken(@m-red,10%);
+        }
+    }
+.advantages-list {
+    color: @brand-primary;
+    font: 17px/1 @font-base;
+    text-align: right;
+    counter-reset: section;
+    .list();
+    > li {
+        margin-bottom: 1.25em;
+        margin-left: 75px;
+        > b {
+            &:extend(.db);
+            &:extend(.m-upper);
+            color: @m-red;
+            text-align: left;
+            }
+        &:before {
+            color: @m-red;
+            counter-increment: section;
+            content: counters(section,'');
+            float: left;
+            font: italic 700 54px/.5 @font-family-serif;
+            margin-left: -75px;
+            margin-top: -.1em;
+            width: 50px;
+            }
+        }
+    }

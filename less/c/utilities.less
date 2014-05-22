@@ -54,3 +54,52 @@
 .affix {
   position: fixed;
 }
+.pseudo(@display : inline-block,@content : '') {
+    content: @content;
+    display: @display;
+    }
+.m-upper {
+    text-transform: uppercase;
+    }
+.b-col {
+    .box-sizing(border-box);
+    }
+.t-row {
+    display: table;
+    width: auto;
+    &.m-wide {
+        width: 100%;
+        }
+    }
+.tt-row {
+    display: table-row;
+    }
+.t-cell {
+    display: table-cell;
+    vertical-align: middle;
+    }
+.m-round {
+    border-radius: @m-round;
+    }
+.db {
+    display: block;
+    }
+.dib {
+    display: inline-block;
+    }
+.dt-row {
+    display: table-row;
+    }
+
+.sp {
+    background-image: url("../i/sp.png");
+    }
+.tc {
+    text-align: center;
+    }
+.tl {
+    text-align: left;
+    }
+.tr {
+    text-align: right;
+    }

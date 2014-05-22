@@ -1,0 +1,86 @@
+.main-header {
+    font-family: @font-base;
+    line-height: 1;
+    margin-bottom: 30px;
+    }
+.main-header-cell {
+    vertical-align: top;
+    }
+.logo-title {
+    &:extend(.db);
+    word-spacing: .75em;
+    text-align: justify;
+    }
+.logo-cell {
+    padding: 0;
+    width: 290px;
+    img {
+        max-width: 100%;
+        }
+    }
+.login-cell {
+    padding: 10px 0 0 40px;
+    width: 105px;
+    }
+.login-link {
+    color: @m-red;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    &:visited {
+        color: @m-red;
+        }
+    }
+.contacts-cell {
+    color: @brand-primary;
+    font-size: 12px;
+    padding-left: 90px;
+    padding-bottom: 7px;
+    }
+.call-to-measure {
+    font-size: 16px;
+    font-weight: 700;
+    > a {
+        &:extend(.db);
+        position: relative;
+        }
+    }
+.delivery-cell {
+    white-space: nowrap;
+    }
+.delivery-free {
+    color: @m-red;
+    &:extend(.db);
+    &:extend(.m-upper);
+    }
+.ico-before {
+    &:before {
+        content: '';
+        &:extend(.db);
+        &:extend(.sp);
+        }
+    }
+.ico-measure {
+    &:before {
+        .size(39px,39px);
+        background-position: 0 0;
+        position: absolute;
+        margin-left: -55px;
+        }
+    }
+.ico-phone {
+    &:before {
+        .size(32px,35px);
+        background-position: -48px 0;
+        position: absolute;
+        margin-left: -55px;
+        }
+    }
+
+.phone-number {
+    font-size: 35px;
+    font-weight: 700;
+    }
+.phone-code {
+    font-size: 20px;
+    font-weight: 400;
+    }

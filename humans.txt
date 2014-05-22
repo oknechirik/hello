@@ -3,13 +3,17 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    UI developer: Sergey Kirichenko
+    Twitter: @oknechirik
+    From: Saint-Petersburg, Russia
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    Normalize.css, jQuery, Modernizr, Bootstrap
+
+/* SITE */
+	Last update:2014/11/05
+	Language: Russian
+	Doctype:HTML5
+	IDE: PhpStorm, Photoshop

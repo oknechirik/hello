@@ -1,0 +1,26 @@
+.inner-nav-list {
+    background-color: @inner-nav-bg;
+    font: 16px @font-base;
+    .list(0 0 25px,22px);
+    }
+.inner-nav-item {
+    margin-bottom: .75em;
+    &.active {
+        > a {
+            color: @inner-nav-active;
+            border-bottom: 1px solid lighten(@inner-nav-active,5%);
+            }
+        }
+    }
+.inner-nav-link {
+    color: @m-blue;
+    border-bottom: 1px solid lighten(@m-blue,5%);
+    &:extend(.dib);
+    &:visited {
+        color: @m-blue;
+        }
+    &:hover {
+//        color: darken(@m-blue,20%);
+        border-bottom-color: transparent;
+        }
+    }

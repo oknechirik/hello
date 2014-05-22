@@ -6,16 +6,17 @@
         <entry key="0">
           <value>
             <LessProfile>
+              <option name="compressOutput" value="true" />
               <option name="cssDirectories">
                 <list>
                   <CssDirectory>
-                    <option name="path" value="C:\Dropbox\works\freelance\OB\petrokna\hello\css" />
+                    <option name="path" value="C:\Users\sergey\Documents\git\hello\css" />
                   </CssDirectory>
                 </list>
               </option>
-              <option name="excludePattern" value="C:\Dropbox\works\freelance\OB\petrokna\hello\less\*\*" />
+              <option name="excludePattern" value="C:\Users\sergey\Documents\git\hello\less\*\*" />
               <option name="id" value="0" />
-              <option name="lessDirPath" value="C:\Dropbox\works\freelance\OB\petrokna\hello\less" />
+              <option name="lessDirPath" value="C:\Users\sergey\Documents\git\hello\less" />
               <option name="name" value="less" />
             </LessProfile>
           </value>

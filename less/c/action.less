@@ -1,0 +1,38 @@
+.actions {
+    margin: 0 auto 1em;
+    width: 221px;
+    }
+.actions-title {
+    background-color: @m-actions-title;
+    background-image: url("../i/actions-l.png"), url("../i/actions-r.png");
+    background-position: 0 0, 100% 0;
+    background-repeat: repeat-y, repeat-y;
+    color: #fff;
+    margin: 0 .75em 1em;
+    padding: .2em .25em .3em;
+    text-align: center;
+    }
+.actions-banner {
+    background-color: @m-red;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    &:extend(.m-round);
+    }
+.actions-banner-image {
+    display: block;
+    margin: 0;
+    width: 100%;
+    }
+.actions-banner-title {
+    color: #fff;
+    margin: 0;
+    padding: 10px 10px 15px  22px;
+    }
+.all-actions {
+    margin: 1em 0;
+    text-align: center;
+    > a {
+        color: @m-blue;
+        }
+    }
