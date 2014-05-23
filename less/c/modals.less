@@ -100,7 +100,7 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: 0;
+  padding: 0 0 20px;
     &:extend(.t-row);
     width: 100%;
 }
@@ -150,17 +150,32 @@
 .label-cell-modal,
 .control-group-modal {
     &:extend(.t-cell);
+  padding-bottom: 15px;
     vertical-align: middle;
     }
 .label-cell-modal {
     font: 26px @font-base;
     color: #fff;
+  padding-left: 35px;
+  padding-right: 20px;
     text-shadow: 2px 2px 2px #911420;
     white-space: nowrap;
+  width: 1%;
     }
 .text-field-modal {
     background-color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
     &:extend(.m-round);
     width: 100%;
     .box-sizing(border-box);
     }
+.control-group-modal {
+  padding-right: 35px;
+}
+.form-btn-row-modal {
+  display: block;
+  padding: 0 35px;
+  text-align: right;
+}

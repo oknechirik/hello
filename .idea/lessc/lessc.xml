@@ -3,21 +3,20 @@
   <component name="LessManager">
     <option name="lessProfileMap">
       <map>
-        <entry key="0">
+        <entry key="1">
           <value>
             <LessProfile>
-              <option name="compressOutput" value="true" />
               <option name="cssDirectories">
                 <list>
                   <CssDirectory>
-                    <option name="path" value="C:\Users\sergey\Documents\git\hello\css" />
+                    <option name="path" value="$PROJECT_DIR$/css" />
                   </CssDirectory>
                 </list>
               </option>
-              <option name="excludePattern" value="C:\Users\sergey\Documents\git\hello\less\*\*" />
-              <option name="id" value="0" />
-              <option name="lessDirPath" value="C:\Users\sergey\Documents\git\hello\less" />
-              <option name="name" value="less" />
+              <option name="excludePattern" value="$PROJECT_DIR$/less/*/*" />
+              <option name="id" value="1" />
+              <option name="lessDirPath" value="$PROJECT_DIR$/less" />
+              <option name="name" value="work" />
             </LessProfile>
           </value>
         </entry>
