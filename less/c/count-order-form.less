@@ -1,5 +1,11 @@
-.count-order-form-row {
+.count-order-form-box {
+    display: table;
     margin: 2em 0;
+    > .count-order-form-row {
+        display: table-row;
+        }
+    }
+.count-order-form-row {
     > .t-cell {
         border-radius: 12px;
         }
@@ -34,4 +40,9 @@
 .count-order-form-btn-cell {
     padding-left: 15px;
     width: 1%;
+    }
+.comment-cell {
+    color: @m-blue;
+    font: 16px @font-family-sans-serif;
+    padding: 3px 15px;
     }

@@ -165,37 +165,42 @@
     }
 .station-name {
     &:before {
-        content: '•';
-        display: inline-block;
-        font-size: 2em;
         margin-right: .33em;
-        line-height: .5;
-        vertical-align: top;
+//        line-height: .5;
+        vertical-align: bottom;
+        &:extend(.sp);
+        .pseudo();
+        .size(13px,13px);
         }
     }
 .red-branch {
     .station-name:before {
         color: @branch-red;
+        background-position: -288px -80px;
         }
     }
 .green-branch {
     .station-name:before {
         color: @branch-green;
+        background-position: -288px -96px;
         }
     }
 .blue-branch {
     .station-name:before {
         color: @branch-blue;
+        background-position: -288px -112px;
         }
     }
 .orange-branch {
     .station-name:before {
         color: @branch-orange;
+        background-position: -288px -64px;
         }
     }
 .purple-branch {
     .station-name:before {
         color: @branch-purple;
+        background-position: -288px -48px;
         }
     }
 .smth-iconed-list {
@@ -244,4 +249,8 @@
 .ico-ask {
     .size(51px,51px);
     background-position: -160px -128px;
+    }
+.ico-stars {
+    .size(60px,57px);
+    background-position: -224px -48px;
     }

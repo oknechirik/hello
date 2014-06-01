@@ -9,13 +9,13 @@
               <option name="cssDirectories">
                 <list>
                   <CssDirectory>
-                    <option name="path" value="$PROJECT_DIR$/css" />
+                    <option name="path" value="C:\Users\sergey\Documents\git\hello\css" />
                   </CssDirectory>
                 </list>
               </option>
-              <option name="excludePattern" value="$PROJECT_DIR$/less/*/*" />
+              <option name="excludePattern" value="C:\Users\sergey\Documents\git\hello\less\*\*" />
               <option name="id" value="1" />
-              <option name="lessDirPath" value="$PROJECT_DIR$/less" />
+              <option name="lessDirPath" value="C:\Users\sergey\Documents\git\hello\less" />
               <option name="name" value="work" />
             </LessProfile>
           </value>

@@ -291,7 +291,8 @@ th {
 .index-news-date,
 .advantages-list > li > b,
 .cto-name,
-.company-name {
+.company-name,
+.scroller > b {
   display: block;
 }
 .dib,
@@ -305,7 +306,10 @@ th {
   display: table-row;
 }
 .sp,
-.ico-before:before {
+.ico-before:before,
+.slide-more:after,
+.station-name:before,
+.scroller > b {
   background-image: url("../i/sp.png");
 }
 .tc,
@@ -400,6 +404,11 @@ p:first-child {
 }
 .btn-call-me:hover {
   box-shadow: 2px 3px 5px rgba(235, 224, 205, 0.8);
+}
+.btn-call-me.btn-large {
+  font-size: 21px;
+  padding: 5px 20px 6px;
+  text-transform: none;
 }
 .pic-l,
 img[align="left"] {
@@ -737,6 +746,9 @@ body {
   background-image: radial-gradient(circle, #189cca, #366986);
   background-repeat: no-repeat;
 }
+.main-nav-item .main-nav-link.m-calculate-link {
+  border-radius: 5px;
+}
 .m-calculate-item {
   background-color: #ed1b2f;
 }
@@ -1029,8 +1041,12 @@ body {
 .work-examples-slider .slick-next {
   right: 5px;
 }
-.count-order-form-row {
+.count-order-form-box {
+  display: table;
   margin: 2em 0;
+}
+.count-order-form-box > .count-order-form-row {
+  display: table-row;
 }
 .count-order-form-row > .t-cell {
   border-radius: 12px;
@@ -1067,12 +1083,17 @@ body {
   padding-left: 15px;
   width: 1%;
 }
+.comment-cell {
+  color: #00749c;
+  font: 16px 'Ubuntu', Helvetica, Arial, sans-serif;
+  padding: 3px 15px;
+}
 .actions {
   margin: 0 auto 1em;
   width: 221px;
 }
 .actions-title {
-  background-color: #4099cb;
+  background-color: #ed1b2f;
   background-image: url("../i/actions-l.png"), url("../i/actions-r.png");
   background-position: 0 0, 100% 0;
   background-repeat: repeat-y, repeat-y;
@@ -1213,10 +1234,10 @@ body {
   display: inline-block;
   margin: 0;
   width: 32px;
-  height: 28px;
+  height: 30px;
 }
 .slick-dots > li.slick-active {
-  background-position: 0 -26px;
+  background-position: 0 -30px;
 }
 .slick-dots > li > b {
   display: block;
@@ -1309,6 +1330,27 @@ body {
   width: 46px;
   height: 45px;
   top: -2px;
+}
+.slide-more {
+  color: #fff;
+  font: 12px 'Ubuntu', Helvetica, Arial, sans-serif;
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+}
+.slide-more:visited {
+  color: #fff;
+}
+.slide-more:hover {
+  text-shadow: 0 0 2px #fff;
+}
+.slide-more:after {
+  background-position: -416px 0;
+  margin-left: 6px;
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 8px;
 }
 .main-footer {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
@@ -1485,27 +1527,32 @@ body {
   text-align: right;
 }
 .station-name:before {
-  content: '•';
-  display: inline-block;
-  font-size: 2em;
   margin-right: .33em;
-  line-height: .5;
-  vertical-align: top;
+  vertical-align: bottom;
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
 }
 .red-branch .station-name:before {
   color: #ff0000;
+  background-position: -288px -80px;
 }
 .green-branch .station-name:before {
   color: #01c850;
+  background-position: -288px -96px;
 }
 .blue-branch .station-name:before {
   color: #0190ec;
+  background-position: -288px -112px;
 }
 .orange-branch .station-name:before {
   color: #f08801;
+  background-position: -288px -64px;
 }
 .purple-branch .station-name:before {
   color: #b50fd9;
+  background-position: -288px -48px;
 }
 .smth-iconed-list {
   border-top: 5px solid #ffd636;
@@ -1575,6 +1622,11 @@ body {
   height: 51px;
   background-position: -160px -128px;
 }
+.ico-stars {
+  width: 60px;
+  height: 57px;
+  background-position: -224px -48px;
+}
 .modal-open {
   overflow: hidden;
 }
@@ -1619,6 +1671,7 @@ body {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: none;
+  min-height: 333px;
 }
 .modal-backdrop {
   position: fixed;
@@ -1638,7 +1691,7 @@ body {
   filter: alpha(opacity=87);
 }
 .modal-header {
-  padding: 10px 35px;
+  padding: 20px 35px;
   min-height: 16.428571429px;
 }
 .modal-header .close {
@@ -1658,8 +1711,17 @@ body {
 }
 .modal-body {
   position: relative;
-  padding: 0 0 20px;
+  padding: 25px 0 20px;
   width: 100%;
+}
+.modal-body.modal-body-success {
+  color: #fff;
+  display: block;
+  font: 26px 'Ubuntu', Helvetica, Arial, sans-serif;
+  padding: 10px 35px 20px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #911420;
+  width: auto;
 }
 .modal-footer {
   margin-top: 15px;
@@ -1695,7 +1757,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 710px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -1710,10 +1772,10 @@ body {
 .label-cell-modal,
 .control-group-modal {
   padding-bottom: 15px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .label-cell-modal {
-  font: 26px 'Ubuntu', Helvetica, Arial, sans-serif;
+  font: 26px/2 'Ubuntu', Helvetica, Arial, sans-serif;
   color: #fff;
   padding-left: 35px;
   padding-right: 20px;
@@ -1725,17 +1787,51 @@ body {
   background-color: #fff;
   border: 0;
   border-radius: 8px;
-  padding: 10px 15px;
+  font-size: 18px;
+  padding: 15px;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: 2px 3px 7px rgba(0,0,0,.25),-1px 3px 7px rgba(0,0,0,.25);
+  box-shadow: 2px 3px 7px rgba(0,0,0,.25),-1px 3px 7px rgba(0,0,0,.25);
 }
 .control-group-modal {
   padding-right: 35px;
 }
-.form-btn-row-modal {
+.control-group-modal .btn-call-me {
+  -webkit-box-shadow: 2px 3px 7px rgba(0,0,0,.25),-1px 3px 7px rgba(0,0,0,.25),1px 1px 2px rgba(255,255,255,.25) inset,-1px -1px 2px rgba(0,0,0,.25) inset;
+  box-shadow: 2px 3px 7px rgba(0,0,0,.25),-1px 3px 7px rgba(0,0,0,.25),1px 1px 2px rgba(255,255,255,.25) inset,-1px -1px 2px rgba(0,0,0,.25) inset;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.comment-modal {
+  color: #fff;
   display: block;
-  padding: 0 35px;
+  font: 16px 'Ubuntu', Helvetica, Arial, sans-serif;
+  margin-top: 5px;
   text-align: right;
+}
+.form-row-modal-btn {
+  text-align: right;
+}
+.comment-large {
+  font-size: 21px;
+  margin-top: 20px;
+}
+.scroller {
+  bottom: 22em;
+  color: #22719a;
+  cursor: pointer;
+  font: 14px 'Ubuntu', Helvetica, Arial, sans-serif;
+  margin-left: -70px;
+  position: fixed;
+  text-align: center;
+  text-shadow: 1px 1px #73a9c3;
+  z-index: 100000;
+}
+.scroller > b {
+  background-position: 0 -256px;
+  margin: 0 auto 5px;
+  width: 39px;
+  height: 39px;
 }

@@ -96,9 +96,9 @@
         cursor: pointer;
         display: inline-block;
         margin: 0;
-        .size(32px,28px);
+        .size(32px,30px);
         &.slick-active {
-            background-position: 0 -26px;
+            background-position: 0 -30px;
             }
         > b {
             display: block;
@@ -186,5 +186,25 @@
         background-position: -352px 0;
         .size(46px,45px);
         top: -2px;
+        }
+    }
+.slide-more {
+    color: #fff;
+    font: 12px @font-base;
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    &:visited {
+        color: #fff;
+        }
+    &:hover {
+        text-shadow: 0 0 2px #fff;
+        }
+    &:after {
+        background-position: -416px 0;
+        margin-left: 6px;
+        &:extend(.sp);
+        .pseudo();
+        .size(12px,8px);
         }
     }

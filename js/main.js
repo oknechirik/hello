@@ -1,5 +1,6 @@
 $(function(){
-    var mainSlider = $('.main-slider')
+    var $d = $( document )
+        , mainSlider = $('.main-slider')
         , workExamplesSlider = $('.work-examples-slider');
     mainSlider.slick({
         dots: true,
@@ -16,4 +17,10 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 3
     })
+    if( $.fn.modal !== undefined ) {
+        $('#success-modal').modal({
+            show : true
+        })
+    }
+    $d.scroller();
 });

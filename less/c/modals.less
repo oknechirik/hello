@@ -13,6 +13,7 @@
 }
 
 // Container that the modal scrolls within
+
 .modal {
   display: none;
   overflow: auto;
@@ -26,7 +27,7 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    .translate(0, -25%);
+    .translate(0, -25%);//TODO uncomment
     .transition-transform(~"0.3s ease-out");
   }
   &.in .modal-dialog { .translate(0, 0)}
@@ -53,6 +54,7 @@
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: none;
+    min-height: 333px;
 }
 
 // Modal background
@@ -72,7 +74,7 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: 10px 35px;
+  padding: 20px 35px;
 //  border-bottom: 1px solid @modal-header-border-color;
   min-height: (@modal-title-padding + @modal-title-line-height);
 }
@@ -100,9 +102,18 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: 0 0 20px;
+  padding: 25px 0 20px;
     &:extend(.t-row);
     width: 100%;
+    &.modal-body-success {
+        color: #fff;
+        display: block;
+        font: 26px @font-base;
+        padding: 10px 35px 20px;
+        text-align: center;
+        text-shadow: 2px 2px 2px #911420;
+        width: auto;
+        }
 }
 
 // Footer (for actions)
@@ -132,7 +143,7 @@
 @media screen and (min-width: @screen-sm-min) {
 
   .modal-dialog {
-    width: 600px;
+    width: 710px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -151,10 +162,10 @@
 .control-group-modal {
     &:extend(.t-cell);
   padding-bottom: 15px;
-    vertical-align: middle;
+    vertical-align: top;
     }
 .label-cell-modal {
-    font: 26px @font-base;
+    font: 26px/2 @font-base;
     color: #fff;
   padding-left: 35px;
   padding-right: 20px;
@@ -166,16 +177,31 @@
     background-color: #fff;
   border: 0;
   border-radius: 8px;
-  padding: 10px 15px;
+    font-size: 18px;
+  padding: 15px;
     &:extend(.m-round);
     width: 100%;
     .box-sizing(border-box);
+    .box-shadow(~"2px 3px 7px rgba(0,0,0,.25),-1px 3px 7px rgba(0,0,0,.25)");
     }
 .control-group-modal {
   padding-right: 35px;
+    .btn-call-me {
+        .box-shadow(~"2px 3px 7px rgba(0,0,0,.25),-1px 3px 7px rgba(0,0,0,.25),1px 1px 2px rgba(255,255,255,.25) inset,-1px -1px 2px rgba(0,0,0,.25) inset");
+        text-shadow: 0 1px 1px rgba(0,0,0,.15);
+        }
 }
-.form-btn-row-modal {
-  display: block;
-  padding: 0 35px;
+.comment-modal {
+    color: #fff;
+    display: block;
+    font: 16px @font-base;
+    margin-top: 5px;
+    text-align: right;
+    }
+.form-row-modal-btn {
   text-align: right;
 }
+.comment-large {
+    font-size: 21px;
+    margin-top: 20px;
+    }
