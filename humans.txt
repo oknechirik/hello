@@ -13,7 +13,7 @@
     Normalize.css, jQuery, Modernizr, Bootstrap
 
 /* SITE */
-	Last update:2014/11/05
+	Last update: 2014/06/12
 	Language: Russian
 	Doctype:HTML5
 	IDE: PhpStorm, Photoshop

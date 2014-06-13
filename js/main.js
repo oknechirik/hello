@@ -19,7 +19,7 @@ $(function(){
     })
     if( $.fn.modal !== undefined ) {
         $('#success-modal').modal({
-            show : true
+            show : false
         })
     }
     $d.scroller();

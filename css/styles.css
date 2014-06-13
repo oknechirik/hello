@@ -715,15 +715,18 @@ body {
   color: #fff;
   font: 700 16px/1 'Ubuntu', Helvetica, Arial, sans-serif;
   margin-bottom: 20px;
+  height: 52px;
 }
 .main-nav-list {
   background-color: #00b4f1;
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 .main-nav-item {
   text-align: center;
+  height: 100%;
 }
 .main-nav-item:first-child .main-nav-link {
   border-radius: 5px 0 0 5px;
@@ -733,7 +736,8 @@ body {
 }
 .main-nav-link {
   color: #fff;
-  padding: 10px 15px;
+  height: 42px;
+  padding: 10px 15px 0;
   text-decoration: none;
 }
 .main-nav-link:visited {
